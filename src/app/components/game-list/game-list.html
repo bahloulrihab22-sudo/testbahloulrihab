@@ -1,0 +1,11 @@
+<h2>
+    jouets a vendre 
+</h2>
+<span class="badge text-bg-primary">nombre de jeux en promotion</span>
+<ul>
+    @for(game of games(); track game.id let dernier=$last){
+        
+            <rih-game-item [game]="game" (promo)="mettreEnpromo($event)"> </rih-game-item>
+        
+    }
+</ul>

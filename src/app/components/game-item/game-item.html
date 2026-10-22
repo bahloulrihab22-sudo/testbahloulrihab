@@ -1,0 +1,14 @@
+
+<div>
+
+<img [src]="game().image" [alt]="game().name" width="100px" height="80px"> <span class="badge text-bg-secondary"> {{game().name}} ({{ game().nbSales | sells }}) </span>
+prix : {{game().price}} DT 
+<input type="checkbox" [checked]="game().forBablies" aria-label="Pour bébés"> 
+@if (game().salePrice === game().price) {
+  <button type="button" (click)="metpromo()">mettre en promotion</button>
+} @else {
+  <span>Prix en promotion:{{ game().salePrice }} DT</span>
+}
+
+</div>
+
